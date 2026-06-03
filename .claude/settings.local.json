@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m py_compile src/config.py)",
+      "Bash(python -m py_compile src/agent/llm.py)",
+      "Bash(python -m py_compile src/agent/prompts.py)",
+      "Bash(python -m py_compile src/output/formatter.py)",
+      "Bash(python -c \"import ast; [ast.parse\\(open\\(f\\).read\\(\\)\\) for f in ['src/main.py', 'src/agent/workflow.py', 'src/feishu/client.py', 'src/feishu/reader.py', 'src/feishu/writer.py', 'src/feishu/notifier.py']]; print\\('all syntax ok'\\)\")",
+      "Bash(python -c \"import ast; [ast.parse\\(open\\(f, encoding='utf-8'\\).read\\(\\)\\) for f in ['src/main.py', 'src/agent/workflow.py', 'src/feishu/client.py', 'src/feishu/reader.py', 'src/feishu/writer.py', 'src/feishu/notifier.py']]; print\\('all syntax ok'\\)\")",
+      "Bash(git add *)",
+      "Bash(git commit -m 'feat: 实现周报智能体核心功能 *)"
+    ]
+  }
+}
